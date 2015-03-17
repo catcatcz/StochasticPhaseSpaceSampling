@@ -1,0 +1,11 @@
+#!/bin/sh
+#MKLPATH=/opt/intel/mkl/9.0/lib/em64t/
+#LIBNR=/work/fortlib/NR/
+#ifort modc.f MFKRB.f SUBR_wig.F -o FRACTION.exe -fast -132 -Vaxlib
+#-heap-arrays
+#ifort modc.f MFKRB.f SUBR_wig.F -o FRACTION.exe -CB -132 -traceback \
+#-g -check -O0
+ifort modc.f MFKRB.f SUBR_wig.F -o FRACTION.exe -O3 -132 -Vaxlib
+#-heap-arrays
+#-L$MKLPATH  -lmkl_lapack -lfftf_intel -lmkl_em64t -lguide -lpthread -lm \
+#-L$LIBNR -lNR 
